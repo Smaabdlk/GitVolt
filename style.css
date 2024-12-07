@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+/* Reset padding, margin, and box-sizing */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Body styling */
+body {
+    background: linear-gradient(to right, #01022d, #2a2a72);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Default text color */
+}
+
+/* Container with background image */
+.container {
+    background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0.5)),
+        url('god.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 85%;
+    height: 640px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    flex-direction: column; /* Stack the content vertically */
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+/* Header Section */
+header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding: 10px;
+    position: relative;
+    color: #fff;
+    logo span:first-letter {
+        color: red;
+    }
+}
+
+
+/* Animation for glowing effect */
+@keyframes glow {
+    from {
+        text-shadow: 2px 2px 8px rgba(243, 156, 18, 0.7);
+    }
+    to {
+        text-shadow: 4px 4px 20px rgba(243, 156, 18, 1);
+    }
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-bottom: 2px solid transparent;
+    font-weight: 500;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+ul li a:hover {
+    border-color: #f39c12;
+    color: #f39c12;
+}
+
+/* Content Section */
+.content {
+    z-index: 1;
+    text-align: center;
+    color: white;
+    width: 60%;
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 70px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: white; /* Default color for h2 */
+    letter-spacing: 1px;
+}
+
+/* Red color for the first letter of h2 */
+.content h2::first-letter {
+    color: red; /* First letter in red */
+    font-size: 120px; /* Increase size for emphasis */
+}
+
+/* Paragraph Styling */
+.content p {
+    font-size: 20px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #ddd; /* Lighter text for paragraph */
+    margin-bottom: 30px;
+}
+
+/* Button Styling */
+.content button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    font-size: 20px;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.content button:hover {
+    background-color: #f39c12;
+    color: #01022d;
+    border-color: #f39c12;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+
+    .content {
+        width: 80%;
+    }
+
+    .content h2 {
+        font-size: 50px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    .content button {
+        font-size: 18px;
+        padding: 10px 15px;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    ul li a {
+        padding: 10px;
+    }
+}
